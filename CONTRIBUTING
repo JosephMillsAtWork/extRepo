@@ -1,0 +1,74 @@
+#################
+Overview 
+#################
+These scripts are started on the init of mango process start up.  If there are enabled using the built in tool of mango
+
+Please make sure that all your ext's files end with .sh  
+
+How it works
+
+
+#######################
+understanding the Options 
+#######################
+
+init:  This is called from the ma.init script and is used if 
+
+start: start the process 
+stop: stop the process 
+## FIXME not implamented
+default-start: a certian time durning the script. 
+default-stop: a certian time to stop. 
+
+################################
+./ma,sh --enable-ext {EXT}
+###############################
+MangoBackend
+This will look to make sure that your file is currently under 
+example  /opt/mango/bin/ext-availible/myExt.sh
+
+if it is it then looks 
+to see if a system link has been created If this is true then it will error out.
+
+saying that there is a ext names whatever allready enabled
+
+If not this will create a system link to you script
+
+################################
+./ma.sh --disable-ext {EXT}
+################################
+MangoBackend
+Looks to see if there is a system link called whatever and then trys to remove it 
+This is why it is important that we use the .sh at the end
+There is error checking going on this whole time.  
+
+###################################
+./ma,sh --list-ext 
+###################################
+
+#############
+Understaning the METANAME property.  
+##############
+When a user runs list-ext it lists out all of the ext's and some meta informations about what the EXT does
+
+If Right Under your shebang of your ext then the user will see the meta info about your ext 
+
+example 
+
+from debug.sh 
+#METALINE Starts the Java debugger as a socket at port 8090 without suspending.
+
+The will grab everything after (the imporant syntax)
+#METALINE 
+
+and present it to the user.
+
+#################
+Understanding the #OPTIONS tag
+#################
+
+This is used to explain to the user what options are avialible, 
+see Also Understanding options
+
+
+#####################################

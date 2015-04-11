@@ -1,0 +1,13 @@
+This is a repo watcher for mangos ext system.  It is used to download ext's
+that have been made by the community or IAS.
+
+pretty simple to use.  Just launch it and follow the instructions.  
+
+You can still remove the ext with the mango command 
+
+./ma.sh remove-ext extRepo
+
+just like you would with any other EXT
+
+
+
